@@ -512,3 +512,11 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+
+.button {
+  @apply w-auto py-2 px-4 font-medium rounded-md text-indigo-700 bg-transparent border border-indigo-700;
+}
+
+.button:hover {
+  @apply text-white bg-purple-700;
+}
