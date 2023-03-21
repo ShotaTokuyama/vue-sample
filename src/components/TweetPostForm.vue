@@ -1,16 +1,17 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, defineEmits } from "vue";
 
-const inputingDescription = ref<string>("");
+const inputtingDescription = ref<string>('');
+const emit = defineEmits(['post-tweet'])
 const postTweet = () => {
-
-};
+  emit('post-tweet',inputtingDescription.value)
+}
 </script>
 
 <template>
   <div class="flex flex-col items-center bg-blue-400 py-6 w-3/5 mb-2">
     <input
-      v-model="inputingDescription"
+      v-model="inputtingDescription"
       class="border-gray-600 border mb-4"
       type="text"
     />
