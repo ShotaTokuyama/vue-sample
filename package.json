@@ -2,9 +2,9 @@
   "name": "vue-sample",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite && tailwindcss build src/styles.css -o src/styles_dev.css",
     "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
@@ -13,6 +13,9 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7",
     "typescript": "^4.9.3",
     "vite": "^4.2.0",
     "vue-tsc": "^1.2.0"
